@@ -2,38 +2,20 @@
 title: Users
 ---
 
-Intellisync creates your site's HTML pages from your content, offering flexible options through Markdown frontmatter. Additionally, CelestialDocs projects have complete access to [Astro's robust page generation tools](https://docs.astro.build/en/basics/astro-pages/). This guide explains how page generation works in Intellisync.
+The **Users** page allows you to see a list of all users who have interacted with your assistant. It provides a quick overview of each user’s recent message, their ID, and the date and time of their interaction. This is helpful for monitoring and managing user interactions with your AI assistant.
 
-## Content pages
+![Users Page](https://utfs.io/f/3e678c3f-0e1e-4b43-ae48-4688aaebf65f-1ufimg.png)
 
-### File formats
+When you click on a user’s message, you’re taken to a detailed **User Details** view. This section displays more specific information about that user, including:
 
-CelestialDocs supports authoring content in Markdown and MDX with no configuration required. 
+- **User Identity**: A unique identifier for the user.
+- **Total Sessions**: The total number of sessions the user has had with your assistant.
+- **Total Messages**: The total number of messages the user has sent.
+- **Avg. Session Time**: The average time the user spends in a session.
+- **Created At**: The date and time the user first interacted with the assistant.
+- **Last Session**: The date and time of the user’s most recent session.
+- **Total Session Time**: The cumulative time the user has spent with the assistant.
 
-### Add pages
+![User Details](https://utfs.io/f/83318aa2-3b5a-42b9-a1dc-c9517fef1e48-ugssao.png)
 
-Add new pages to your site by creating `.md` or `.mdx` files in `src/content/docs/`. Use sub-folders to organize your files and to create multiple path segments.
-
-### Type-safe frontmatter
-
-All CelestialDocs pages share a customizable set of frontmatter properties that control their appearance:
-
-```yaml
----
-title: Sample
-author: hyperoot
-pubDatetime: 2024-04-09T12:00:00-05:30
-modDatetime: 2024-08-01T12:00:00-05:30 
-description: 'Sample description'
-draft: true
-tags:
-- anything
-- you
-- want
-hide_toc: 
-hide_sidenav: 
-hide_breadcrumbs: 
----
-```
-
-A snippet template is also included with this project if you are using vscode. Just type `docs` in any `.md` or `.mdx` file and you will see a suggestion for a template named `docs`. Most of the frontmatter properties are commented. Uncomment them by removing `#`. For date and time we use [standard date-time string format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format).
+The **Message History** section shows the conversation between the user and the assistant, providing a full context of the interaction history. This can be especially useful for understanding user behavior and improving the assistant's responses.

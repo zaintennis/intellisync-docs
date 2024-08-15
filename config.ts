@@ -6,7 +6,6 @@ export const SITE = {
   desc: "Documentation template using Astro and Shadcn",
   title: "IntelliSync Solutions",
   ogImage: "og-image.jpg",
-  repo: "https://github.com/HYP3R00T/CelestialDocs",
 };
 
 export const LOCALE = {
@@ -44,12 +43,6 @@ export const docconfig = {
 
 // Set your social. It will appear in footer. Don't change the `name` value.
 export const Socials: SocialObjects = [
-  {
-    name: "Github",
-    href: "https://github.com/HYP3R00T/",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: true,
-  },
   {
     name: "Facebook",
     href: "https://github.com/HYP3R00T/",

@@ -2,116 +2,44 @@
 title: Knowledge Base
 ---
 
-Intellisync supports [MDX](https://mdxjs.com/) files, which extend Markdown by allowing the inclusion of React components within your content. This enables dynamic and interactive documentation. We specifically use [GitHub flavored markdown (GFM)](https://mdxjs.com/guides/gfm/). Markdown features, refer to the [Markdown documentation](/guides/authoring-content-in-md).
+The **Knowledge Base** in Intellisync Solutions allows you to input and manage information that your AI Assistant references. This guide will walk you through the UI and options available in the Knowledge Base.
 
-## Using a component
+## Adding New Knowledge
 
-You can use a component by importing it into your MDX file and then rendering it as a JSX tag. These look like HTML tags but start with an uppercase letter matching the name in your import statement:
+When you first access the Knowledge Base, you will see an empty state with an option to add new knowledge.
 
-```mdx
----
-title: Welcome to my docs
----
+![Empty Knowledge Base](https://utfs.io/f/6e130a6b-0fec-4ca2-81cb-ac745dc90c15-xasnjl.png)
+ 
+Click on the **+ New Knowledge** button to start inputting information that your Assistant will use.
 
-import Callout from "@/components/Callout.astro";
+## Importing Knowledge
 
-<Callout variant="info">
-Sample callout
-</Callout>
-```
+You have three options to import knowledge into the system:
 
-See the [components](/guides/components) for all custom components and their available fields. 
+1. **Website**: Crawl and sync content from a specific URL.
+2. **Files**: Upload files (e.g., PDFs) that the Assistant will reference.
+3. **Text Editor**: Manually input text or content that the Assistant will learn from.
 
-## Using GFM (GitHub-Flavored Markdown)
+![Import Knowledge Base](https://utfs.io/f/459e6cbc-04a7-4630-ac0a-e5b3fed271df-eqmb86.png)
 
-MDX in Intellisync supports [GitHub flavored markdown (GFM)](https://mdxjs.com/guides/gfm/), which includes additional features such as tables, task lists, and strikethrough text.
+### Website
 
-### Task Lists
+Use the "Crawl Website" option to automatically sync content from a specified URL. Simply enter the URL, and the system will begin crawling the website to gather information.
 
-You can create task lists using GFM syntax.
+![Crawl Website](https://utfs.io/f/57b92b6f-f0fc-4547-aed4-93684c0f2739-sjklh9.png)
 
-- [x] Task 1
-- [ ] Task 2
-- [ ] Task 3
+### Files
 
-```md
-- [x] Task 1
-- [ ] Task 2
-- [ ] Task 3
-```
+You can upload files (PDF format) for the Assistant to reference. The system accepts PDF files with a maximum size of 10 MB.
 
-### Tables
+![Upload Files](https://utfs.io/f/a8366f81-def7-40c1-851d-799da65f6a3b-khp31f.png)
 
-You can also create tables using GFM.
+### Text Editor
 
-| Syntax    | Description |
-| --------- | ----------- |
-| Header    | Title       |
-| Paragraph | Text        |
+For custom content, you can use the Text Editor to manually input text that the Assistant will use. This is useful for adding specific knowledge that may not be available in a file or on a website.
 
-```md
-| Syntax    | Description |
-| --------- | ----------- |
-| Header    | Title       |
-| Paragraph | Text        |
-```
-### Strikethrough
+![Text Editor](https://utfs.io/f/b16ec3ba-bbaa-417d-81be-f01052906e3f-ng6809.png)
 
-Strikethrough text can be created using double tilde `~~`.
-
-This is ~~strikethrough~~ text.
-
-```md
-This is ~~strikethrough~~ text.
-```
-
-## Frontmatter
-
-MDX files support frontmatter in the same way as Markdown files. You can define metadata at the top of the file.
-
-```mdx
----
-title: Sample MDX Page
 ---
 
-Page content goes here, after `---`.
-```
-
-Refer to the frontmatter reference for all available fields and how to add custom fields.
-
-## Using JavaScript Expressions
-
-MDX allows you to use JavaScript expressions within your content. This can be useful for dynamic content and calculations.
-
-Current year: {new Date().getFullYear()}
-
-```mdx
-Current year: {new Date().getFullYear()}
-```
-
-
-```mdx
-**Fibonacci Sequence**
-
-The first 10 numbers in the Fibonacci sequence are:
-
-{
-  Array.from({ length: 10 }).map((_, i) => (
-    <span key={i}>{fibonacci(i)} </span>
-  ))
-}
-```
-
-## Syntax Highlighting
-
-MDX supports syntax highlighting for code blocks using backticks. You can specify the language for proper highlighting.
-
-````mdx
-```jsx
-const MyComponent = () => {
-  return <div>Hello, MDX!</div>;
-};
-```
-````
-
-MDX combines the best of Markdown and JSX, making it a powerful tool for creating rich, interactive documentation. For more details on Markdown syntax, please see the [Markdown documentation](/guides/authoring-content-in-md).
+This guide should help you navigate and use the Knowledge Base feature in Intellisync Solutions. By carefully curating the content here, you can ensure that your AI Assistant has accurate and relevant information to assist users effectively.

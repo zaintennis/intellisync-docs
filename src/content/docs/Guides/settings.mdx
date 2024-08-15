@@ -1,46 +1,42 @@
 ---
 title: Settings
 ---
-By default, Intellisync sites include sidebar navigation. It is generated after parsing the folder structure of `docs` folder.
 
-## Custom order
+The **Settings** page allows you to customize and manage various aspects of your assistant. This is where you can fine-tune its appearance, behavior, and accessibility. Here's a quick overview of what you can do in the Settings:
 
-By default, it will order the top-level items (folders and files that are immediately inside the `docs` folder) alphabetically. But we can provide a custom order to the top level items. 
+## Edit Assistant
 
-In `config.js` you can set `side_nav_menu_order` with an order of items. Mind that the type is an array of strings. Each string is just the `slug` of that page.
+The **Edit Assistant** section lets you modify the basic information and appearance of your assistant. You can:
 
-```js
-// config.js
+- Change the assistant's name.
+- Upload a profile photo that will be displayed as your assistant's avatar.
+- Choose the appearance mode for your assistant, such as Automatic, Dark, or Light.
+- Set conversation starters that will appear as prompts for users to begin interactions.
 
-export const side_nav_menu_order: string[] = ["getting-started", "guides"];
-// getting-started.mdx (file)
-// guides (folder)
-```
+![Settings Page](https://utfs.io/f/3bb2e378-69a8-44cf-afe6-c79f90586185-nq54ir.png)
 
-You can include `folder-name`, `md` & `mdx` files. If you don't order every items, then the left out folders and files will the ordered after that. Don't add extensions for `md` & `mdx` files.
+## Custom Instructions
 
-## Hide Sidebar Navigation
+In the **Custom Instructions** section, you can add specific instructions for your assistant. This is where you define how your assistant should behave and respond. Additionally, you can:
 
-### Hide globally
+- Restrict the assistant’s responses to rely solely on your knowledge base content by toggling the **Knowledge Base Only** switch.
 
-In `config.js`, you can hide sidebar navigation by keeping the value of `hide_side_navigations` as `true`. This will hide the sidebar navigation for all pages. 
+![Custom Instructions](https://utfs.io/f/4d51c457-2fbe-4350-98e4-4f67048e4670-3syjcx.png)
 
-```js
-// config.js
+## Share
 
-export const docconfig = {
-  ...
-  hide_side_navigations: true,
-  ...
-};
-```
+The **Share** section provides options to make your assistant accessible to others. You can:
 
-### Hide locally
+- Set the assistant's privacy to **Private** or **Public**.
+- Generate a shareable link to allow others to interact with your assistant.
+- Obtain an embed code to integrate your assistant into a website.
 
-To hide sidebar navigation for specific pages only, then add `hide_sidenav` in the frontmatter as `true`.
+![Share](https://utfs.io/f/1c8058ed-b142-4cca-b54d-e5b436191167-1t4tlr.png)
 
-```yaml
----
-hide_sidenav: true
----
-```
+## Danger Zone
+
+The **Danger Zone** is where you can delete your assistant. This action is irreversible, so proceed with caution. You can:
+
+- Toggle the switch to confirm your intent to delete the assistant permanently.
+
+![Danger Zone](https://utfs.io/f/d32d646e-8345-430a-af95-18867953713e-m33iad.png)
