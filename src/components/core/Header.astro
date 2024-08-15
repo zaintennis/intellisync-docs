@@ -47,7 +47,7 @@ const { class: className } = Astro.props;
       {!docconfig.hide_search && <Search client:only="react" />}
       {
         !docconfig.hide_repo_button && (
-          <a href={SITE.repo} target="_blank"></a>
+          <a target="_blank"></a>
         )
       }
       <div class="md:hidden flex flex-row-reverse gap-4">
