@@ -1,35 +1,52 @@
 ---
 const { class: className } = Astro.props;
 import { Image } from "astro:assets";
-import { Button } from "@/components/ui/button";
 import IntelliSyncUI from "@/assets/IntellisyncUI.png";
 ---
 
-<div
+<section
   class:list={[
-    "pattern py-6 w-full md:w-3/4 md:max-w-8xl min-h-dynamic_hero flex flex-col items-center justify-center",
+    "relative overflow-hidden bg-background pt-16 md:pt-20 lg:pt-24",
     className,
   ]}
 >
-  <div class="flex flex-col-reverse md:flex-row">
-    <div
-      class="flex flex-col gap-4 md:w-1/2 p-8 justify-center items-center md:items-start"
-    >
-      <h1
-        class="text-pretty text-center md:text-left md:text-4xl lg:text-5xl tracking-wide"
-      >
-        Elevate Your Experience with <i class="text-primary">Intellisync'</i> Docs
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
+        Documentation that <span class="text-gradient">empowers</span> your development
       </h1>
-      <a href="/getting-started" class="py-4">
-        <Button size="lg" className="rounded-lg">
-          <h4 class="text-m">Start learning.</h4>
-        </Button>
-      </a>
+      <p class="mt-6 text-lg leading-8 text-muted-foreground">
+        Comprehensive, clear, and continuously updated documentation to help you build amazing applications with IntelliSync.
+      </p>
+      <div class="mt-10 flex items-center justify-center">
+        <a
+          href="/guides"
+          class="text-lg font-semibold leading-6 text-primary hover:text-primary/90 transition-colors duration-200 inline-flex items-center group"
+        >
+          View Documentation
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
     </div>
-    <div class="hidden md:flex w-2/3 justify-center align-middle">
-      <Image src={IntelliSyncUI} alt="404" />
+    <div class="mt-16 flow-root sm:mt-24">
+      <div class="relative rounded-xl bg-muted/50 p-2 ring-1 ring-inset ring-muted lg:rounded-2xl lg:p-4">
+        <Image
+          src={IntelliSyncUI}
+          alt="IntelliSync UI Preview"
+          class="rounded-md bg-background shadow-2xl ring-1 ring-muted"
+        />
+      </div>
     </div>
   </div>
-</div>
+  <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+    <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-primary to-secondary opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
+  </div>
+</section>
 
-<style></style>
+<style>
+  .text-gradient {
+    @apply bg-gradient-to-br from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+</style>

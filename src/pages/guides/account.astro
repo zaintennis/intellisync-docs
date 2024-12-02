@@ -1,0 +1,99 @@
+---
+import GuideLayout from "@/layouts/GuideLayout.astro";
+
+const title = "Account Management";
+const description = "Learn how to manage your IntelliSync account settings and preferences";
+---
+
+<GuideLayout title={title} description={description}>
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-8">Account Management</h1>
+
+        <p class="text-lg mb-12">
+            The <strong>Account</strong> section allows you to manage various settings related to your profile, organization, members, and billing. It provides an interface to personalize your account, manage organizational details, and upgrade your subscription plan.
+        </p>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Navigating to Account</h2>
+            <p class="mb-4">To access the Account settings, click on the <strong>Account</strong> button located in the sidebar of the platform. This will bring up the following options:</p>
+            <ul class="list-disc pl-6 mb-6">
+                <li>Profile</li>
+                <li>Organization</li>
+                <li>Members</li>
+                <li>Billing</li>
+            </ul>
+            <div class="space-y-4">
+                <img 
+                    src="https://utfs.io/f/9257dfb2-3680-42cc-ab95-aefee09e0f11-uiwrhd.png" 
+                    alt="Account Settings" 
+                    class="rounded-2xl shadow-lg w-full"
+                />
+                <img 
+                    src="https://utfs.io/f/4a6e2a7a-63f1-4c31-82f0-58b0ef42c982-jh2137.png" 
+                    alt="Account Settings" 
+                    class="rounded-2xl shadow-lg w-full"
+                />
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Profile Settings</h2>
+            <p class="mb-4">In the <strong>Profile</strong> section, you can manage your personal details:</p>
+            <ul class="list-disc pl-6 mb-6">
+                <li><strong>Full Name</strong>: Update your display name.</li>
+                <li><strong>Profile Photo</strong>: Upload or change your profile photo.</li>
+                <li><strong>Logout</strong>: Sign out of your account securely.</li>
+            </ul>
+            <img 
+                src="https://utfs.io/f/b9c7ea3b-e0d2-46e2-82ab-74958ad06161-5482fr.png" 
+                alt="Account Settings" 
+                class="rounded-2xl shadow-lg w-full"
+            />
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Organization Settings</h2>
+            <p class="mb-4">In the <strong>Organization</strong> section, manage the organization linked to your account:</p>
+            <ul class="list-disc pl-6 mb-6">
+                <li><strong>Display Name</strong>: Set or change the display name of your organization.</li>
+                <li><strong>Logo</strong>: Upload a logo for your organization.</li>
+                <li><strong>Change Organization</strong>: Option to switch to a different organization.</li>
+            </ul>
+            <img 
+                src="https://utfs.io/f/2f0c63b5-fc42-48a8-a496-752a08a96d47-jhwe9f.png" 
+                alt="Account Settings" 
+                class="rounded-2xl shadow-lg w-full"
+            />
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Members Management</h2>
+            <p class="mb-4">The <strong>Members</strong> section allows you to view and manage members within your organization:</p>
+            <ul class="list-disc pl-6 mb-6">
+                <li><strong>Member Details</strong>: View the list of members, including their names, roles, and email addresses.</li>
+                <li><strong>Role Management</strong>: Assign roles to members (e.g., OWNER).</li>
+            </ul>
+            <img 
+                src="https://utfs.io/f/cd6b5a0f-ed82-41c1-bf50-6e6dd3b802dd-foxtsp.png" 
+                alt="Account Settings" 
+                class="rounded-2xl shadow-lg w-full"
+            />
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Billing & Upgrade Plan</h2>
+            <p class="mb-4">In the <strong>Billing</strong> section, you can manage your current subscription plan and explore upgrade options:</p>
+            <ul class="list-disc pl-6 mb-6">
+                <li><strong>Current Plan</strong>: Displays your current subscription plan details.</li>
+                <li><strong>Usage Metrics</strong>: Track your message usage within the current plan.</li>
+                <li><strong>Upgrade Plan</strong>: Explore and select from available plans (Starter, Pro, Plus) that best fit your needs.</li>
+                <li><strong>Payment</strong>: All payments are processed securely through Stripe.</li>
+            </ul>
+            <img 
+                src="https://utfs.io/f/3f2b1e8c-df67-4a0d-8926-3099e7bd44ae-1rjzoq.png" 
+                alt="Account Settings" 
+                class="rounded-2xl shadow-lg w-full"
+            />
+        </section>
+    </div>
+</GuideLayout>

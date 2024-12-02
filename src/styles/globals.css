@@ -213,7 +213,7 @@ td {
 }
 
 .prose li input {
-  @apply appearance-none w-3 h-3 border-2 border-Red rounded-sm bg-background checked:bg-Green checked:border-0 mr-2;
+  @apply appearance-none w-3 h-3 border-2 border-destructive rounded-sm bg-background checked:bg-success checked:border-0 mr-2;
 }
 
 /* ===== pattern ===== */

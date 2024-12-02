@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  icon?: string;
+}
+
+const { title, description, href, icon } = Astro.props;
+---
+
+<a href={href} class="group relative overflow-hidden rounded-xl border border-border/50 bg-card p-6 transition-all duration-300 hover:border-border hover:shadow-lg hover:shadow-primary/5">
+  <!-- Hover effect -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+  
+  <div class="flex items-start gap-4">
+    {icon && (
+      <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+        <span class="text-xl">{icon}</span>
+      </div>
+    )}
+    <div class="flex-1">
+      <h3 class="font-display text-lg font-semibold leading-tight tracking-tight text-card-foreground group-hover:text-primary transition-colors duration-300">
+        {title}
+      </h3>
+      <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+        {description}
+      </p>
+    </div>
+    <!-- Arrow icon -->
+    <div class="ml-4 mt-1 text-muted-foreground group-hover:text-primary transition-colors duration-300">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M6.5 3.5L11 8L6.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</a>

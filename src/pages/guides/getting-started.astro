@@ -1,0 +1,76 @@
+---
+import GuideLayout from '../../layouts/GuideLayout.astro';
+
+const title = "Getting Started";
+const description = "Start building amazing conversational experiences with IntelliSync";
+---
+
+<GuideLayout title={title} description={description}>
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-8">Getting Started with IntelliSync</h1>
+
+        <p class="text-lg mb-8">
+            IntelliSync is a comprehensive platform designed to streamline and enhance the way you manage your workflows and communications. Built on modern web technologies, it offers a user-friendly interface for efficient management of your tasks and projects.
+        </p>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Create Your Account</h2>
+            <ol class="list-decimal pl-6 space-y-2">
+                <li>Visit the <a href="https://intellisyncsolutions.io/" class="text-blue-600 hover:underline">IntelliSync</a> web application</li>
+                <li>Click on "Sign Up" if you're new, or "Login" if you already have an account</li>
+                <li>Follow the prompts to create your account and complete onboarding</li>
+            </ol>
+            <img src="https://utfs.io/f/701f24ba-5fee-4507-9f17-d73a23e25929-ke651m.png" alt="Account Creation" class="mt-4 rounded-lg shadow-md w-full"/>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Create Your Assistant</h2>
+            <ol class="list-decimal pl-6 space-y-2">
+                <li>Click on the "Create Chatbot" button</li>
+                <li>Give your assistant a descriptive name</li>
+                <li>Click on Save to finalize</li>
+            </ol>
+            <img src="https://utfs.io/f/c2170ed4-1e3b-4601-8ce5-7d4882e00244-ia19t.png" alt="Creating Assistant" class="mt-4 rounded-lg shadow-md w-full"/>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Customizing Your Profile</h2>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>Access profile settings via "Account" in the bottom left</li>
+                <li>Edit your profile image and display name</li>
+                <li>Customize your assistant's settings</li>
+                <li>Manage your account and logout options</li>
+            </ul>
+            <img src="https://utfs.io/f/b9c7ea3b-e0d2-46e2-82ab-74958ad06161-5482fr.png" alt="Profile Customization" class="mt-4 rounded-lg shadow-md w-full"/>
+        </section>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-12">
+            <p class="text-blue-700"><strong>Tip:</strong> Remember to regularly update your profile information and assistant settings to maintain an optimal experience with IntelliSync.</p>
+        </div>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-6">Next Steps</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="/guides/onboarding" class="block p-4 rounded-lg border hover:bg-gray-50 transition-colors">
+                    <h3 class="text-xl font-medium">Onboarding Guide →</h3>
+                    <p class="text-gray-600">Learn how to navigate the application effectively.</p>
+                </a>
+                
+                <a href="/guides/assistant" class="block p-4 rounded-lg border hover:bg-gray-50 transition-colors">
+                    <h3 class="text-xl font-medium">Assistant Basics →</h3>
+                    <p class="text-gray-600">Master the fundamentals of using the chatbot.</p>
+                </a>
+                
+                <a href="/guides/insights" class="block p-4 rounded-lg border hover:bg-gray-50 transition-colors">
+                    <h3 class="text-xl font-medium">Insights & Analytics →</h3>
+                    <p class="text-gray-600">Learn to measure and improve your tool usage.</p>
+                </a>
+                
+                <a href="/guides/knowledge-base" class="block p-4 rounded-lg border hover:bg-gray-50 transition-colors">
+                    <h3 class="text-xl font-medium">Knowledge Base →</h3>
+                    <p class="text-gray-600">Enhance your assistant with knowledge sources.</p>
+                </a>
+            </div>
+        </section>
+    </div>
+</GuideLayout>

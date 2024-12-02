@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.75rem;
+    
+    /* Card and Popover */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    /* Status Colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+    --success: 142 72% 29%;
+    --success-foreground: 0 0% 98%;
+    --info: 198 93% 60%;
+    --info-foreground: 0 0% 98%;
+  }
+ 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    
+    /* Card and Popover */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Status Colors */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --warning: 38 92% 40%;
+    --warning-foreground: 0 0% 98%;
+    --success: 142 72% 24%;
+    --success-foreground: 0 0% 98%;
+    --info: 198 93% 50%;
+    --info-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Status Badges */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium transition-colors;
+  }
+
+  .badge-error {
+    @apply bg-destructive/10 text-destructive border border-destructive/20;
+  }
+
+  .badge-warning {
+    @apply bg-warning/10 text-warning border border-warning/20;
+  }
+
+  .badge-success {
+    @apply bg-success/10 text-success border border-success/20;
+  }
+
+  .badge-info {
+    @apply bg-info/10 text-info border border-info/20;
+  }
+
+  /* Status Text */
+  .text-status-error {
+    @apply text-destructive;
+  }
+
+  .text-status-warning {
+    @apply text-warning;
+  }
+
+  .text-status-success {
+    @apply text-success;
+  }
+
+  .text-status-info {
+    @apply text-info;
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-border hover:bg-muted transition-colors rounded-full;
+  }
+
+  /* Code blocks */
+  .prose pre {
+    @apply p-4 rounded-lg bg-card border shadow-sm overflow-x-auto;
+  }
+
+  .prose code {
+    @apply font-mono text-sm bg-muted px-1.5 py-0.5 rounded-md;
+  }
+
+  /* Tables */
+  .prose table {
+    @apply w-full my-6 text-sm;
+  }
+
+  .prose tr {
+    @apply border-b border-border/50;
+  }
+
+  .prose th {
+    @apply font-medium text-left p-2 bg-muted/50;
+  }
+
+  .prose td {
+    @apply p-2;
+  }
+
+  /* Links */
+  .prose a {
+    @apply text-primary hover:text-primary-hover underline-offset-4 transition-colors duration-200;
+  }
+
+  /* Headings */
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  .prose h1 {
+    @apply text-4xl mb-8;
+  }
+
+  .prose h2 {
+    @apply text-3xl mt-12 mb-6;
+  }
+
+  .prose h3 {
+    @apply text-2xl mt-8 mb-4;
+  }
+
+  .prose h4 {
+    @apply text-xl mt-6 mb-3;
+  }
+
+  /* Lists */
+  .prose ul, .prose ol {
+    @apply my-6 ml-6;
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  /* Blockquotes */
+  .prose blockquote {
+    @apply pl-4 my-6 border-l-2 border-border italic text-muted-foreground;
+  }
+
+  /* Images */
+  .prose img {
+    @apply rounded-lg shadow-sm;
+  }
+
+  /* Horizontal rule */
+  .prose hr {
+    @apply my-8 border-border;
+  }
+
+  /* Status indicators */
+  .status-error {
+    @apply text-destructive border-destructive;
+  }
+
+  .status-warning {
+    @apply text-warning border-warning;
+  }
+
+  .status-success {
+    @apply text-success border-success;
+  }
+
+  .status-info {
+    @apply text-info border-info;
+  }
+}

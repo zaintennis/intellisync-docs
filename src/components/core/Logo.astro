@@ -1,0 +1,10 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div class:list={["flex items-center gap-2", className]}>
+  <img src="/logo.svg" alt="IntelliSync Logo" class="w-8 h-8" />
+  <span class="font-display text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+    IntelliSync
+  </span>
+</div>

@@ -1,0 +1,114 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { guideNavItems } from "@/lib/navigation";
+
+const title = "Guides";
+const description = "Comprehensive tutorials and instructions for the IntelliSync platform";
+
+const guides = [
+  {
+    title: "Account Management",
+    description: "Manage your personal and organizational settings, including profile customization and billing.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>`,
+    gradient: "from-primary to-secondary",
+    href: "/guides/account"
+  },
+  {
+    title: "AI Assistant",
+    description: "Create, customize, and manage your AI Assistant to improve workflow and interactions.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>`,
+    gradient: "from-secondary to-accent",
+    href: "/guides/assistant"
+  },
+  {
+    title: "Insights",
+    description: "Track usage metrics and performance analytics to improve your assistant's effectiveness.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>`,
+    gradient: "from-accent to-primary",
+    href: "/guides/insights"
+  },
+  {
+    title: "Knowledge Base",
+    description: "Import and manage knowledge sources for accurate and context-aware responses.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>`,
+    gradient: "from-primary to-accent",
+    href: "/guides/knowledge-base"
+  },
+  {
+    title: "Onboarding",
+    description: "Get started with IntelliSync and set up your first AI assistant for success.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>`,
+    gradient: "from-secondary to-primary",
+    href: "/guides/onboarding"
+  },
+  {
+    title: "Settings",
+    description: "Configure and customize your IntelliSync experience to match your needs.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>`,
+    gradient: "from-accent to-secondary",
+    href: "/guides/settings"
+  },
+  {
+    title: "Upgrade",
+    description: "Explore subscription plans and upgrade options for enhanced features.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+          </svg>`,
+    gradient: "from-primary to-secondary",
+    href: "/guides/upgrade"
+  },
+  {
+    title: "Users",
+    description: "Manage users, monitor interactions, and analyze engagement patterns.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>`,
+    gradient: "from-secondary to-primary",
+    href: "/guides/users"
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="relative py-20 overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-y-0 w-full h-full bg-muted/30 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"></div>
+    </div>
+
+    <div class="container px-4 md:px-6">
+      <div class="flex flex-col items-center justify-center space-y-4 text-center">
+        <div class="space-y-2">
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{title}</h1>
+          <p class="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            {description}
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        {guides.map(guide => (
+          <a href={guide.href} class="group relative overflow-hidden rounded-lg border bg-background p-6 shadow-md transition-shadow hover:shadow-lg">
+            <div class={`absolute inset-0 -z-10 bg-gradient-to-br opacity-20 ${guide.gradient}`}></div>
+            <div class={`inline-flex rounded-lg bg-gradient-to-br ${guide.gradient} p-3 text-white shadow-sm`} set:html={guide.icon} />
+            <h3 class="mt-4 text-xl font-semibold">{guide.title}</h3>
+            <p class="mt-2 text-muted-foreground">{guide.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,87 @@
+---
+import GuideLayout from "@/layouts/GuideLayout.astro";
+
+const title = "Upgrade Plans";
+const description = "Explore IntelliSync subscription plans and upgrade options";
+---
+
+<GuideLayout title={title} description={description}>
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-8">Upgrade Your Plan</h1>
+
+        <p class="text-lg mb-12">
+            The <strong>Upgrade Your Plan</strong> section allows you to manage your subscription plan based on your messaging needs. You can view your current plan and explore available upgrade options to ensure your assistant meets your requirements.
+        </p>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8">
+            <p class="text-blue-700">Click the button in the bottom left to see your current usage metrics and upgrading options.</p>
+        </div>
+
+        <img 
+            src="https://utfs.io/f/9257dfb2-3680-42cc-ab95-aefee09e0f11-uiwrhd.png" 
+            alt="Upgrade Options" 
+            class="rounded-2xl shadow-lg w-full mb-12"
+        />
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Usage Metrics</h2>
+            <p class="text-gray-700">
+                At the top, you'll see your <strong>Usage Metrics</strong>, showing how many messages you've used out of your total allotment for the month. This helps you keep track of your message usage and determine if you need to upgrade your plan.
+            </p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Current Plan</h2>
+            <p class="text-gray-700">
+                This section displays your <strong>Current Plan</strong>, indicating the plan you are currently subscribed to and its cost. For instance, if you're on the <strong>Trial Plan</strong>, you get 50 messages per month at no cost.
+            </p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Upgrade Plan</h2>
+            <p class="mb-6">Here, you have the option to select from different plans:</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Starter Plan</h3>
+                    <p class="text-2xl font-bold mb-2">$37 USD/month</p>
+                    <p class="text-gray-600">2K messages</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Pro Plan</h3>
+                    <p class="text-2xl font-bold mb-2">$99 USD/month</p>
+                    <p class="text-gray-600">5K messages</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Plus Plan</h3>
+                    <p class="text-2xl font-bold mb-2">$297 USD/month</p>
+                    <p class="text-gray-600">10K messages</p>
+                </div>
+            </div>
+
+            <img 
+                src="https://utfs.io/f/3f2b1e8c-df67-4a0d-8926-3099e7bd44ae-1rjzoq.png" 
+                alt="Plan Selection Interface" 
+                class="rounded-2xl shadow-lg w-full"
+            />
+            
+            <p class="text-gray-600 mt-4">Each plan offers a different messaging limit to suit various levels of usage.</p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Payment</h2>
+            <div class="bg-gray-50 border-l-4 border-gray-500 p-4">
+                <p class="text-gray-700 mb-2">Payments are processed securely through Stripe.</p>
+                <p class="text-gray-700">You can upgrade, downgrade, or cancel your plan at any time, giving you flexibility based on your needs.</p>
+            </div>
+        </section>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-8">
+            <p class="text-blue-700">
+                This section ensures that you have full control over your subscription, allowing you to choose a plan that aligns with your usage and budget.
+            </p>
+        </div>
+    </div>
+</GuideLayout>

@@ -1,7 +1,6 @@
 ---
 import { Button } from "@/components/ui/button";
-
-import { menu_items } from "config";
+import { mainNavItems } from "@/lib/navigation";
 
 const pathname = new URL(Astro.request.url).pathname;
 const pathname_part = pathname.split("/")[1];
@@ -9,7 +8,7 @@ const pathname_part = pathname.split("/")[1];
 
 <div class="flex gap-4">
   {
-    menu_items.map((item) => (
+    mainNavItems.map((item) => (
       <a href={item.href}>
         <Button
           variant={

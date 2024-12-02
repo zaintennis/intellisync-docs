@@ -1,0 +1,75 @@
+---
+import GuideLayout from "@/layouts/GuideLayout.astro";
+
+const title = "Insights";
+const description = "Learn how to interpret and utilize the Insights page in IntelliSync Solutions to track user engagement and activity";
+---
+
+<GuideLayout title={title} description={description}>
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-8">Insights</h1>
+
+        <p class="text-lg mb-12">
+            The <strong>Insights</strong> page in Intellisync Solutions offers a comprehensive overview of your user statistics and activity. This guide will walk you through the key elements of the Insights page and how to interpret the data presented.
+        </p>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Overview of Statistics</h2>
+            <p class="mb-4">At the top of the Insights page, you'll find a summary of key metrics that provide a quick snapshot of your user activity:</p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li><strong>Total Users</strong>: This displays the total number of users who have interacted with your assistant.</li>
+                <li><strong>New Users</strong>: Shows the count of users who have interacted with the assistant for the first time within the selected time frame.</li>
+                <li><strong>Returning Users</strong>: Indicates the number of users who have returned for additional interactions.</li>
+                <li><strong>Avg. Session Time</strong>: The average duration that users spend interacting with the assistant during a session.</li>
+            </ul>
+            <img 
+                src="https://utfs.io/f/5562f109-3f79-42f1-a08f-9def5a12dcdd-90kau3.png" 
+                alt="Statistics Overview" 
+                class="rounded-2xl shadow-lg w-full"
+            />
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Message Volume</h2>
+            <p class="mb-4">Below the summary statistics, you'll find a graph representing the <strong>Message Volume</strong>. This graph shows the number of messages exchanged over time, giving you a visual understanding of the interaction trends.</p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+                <li>The x-axis represents time, broken down by the selected period (e.g., day, week, month).</li>
+                <li>The y-axis shows the number of messages exchanged.</li>
+            </ul>
+            <p class="mb-6">This graph can help identify peak interaction periods and analyze user engagement trends.</p>
+            <img 
+                src="https://utfs.io/f/10e2419f-ca60-498b-94f8-6ac81e71457c-5jr42o.png" 
+                alt="Message Volume Graph" 
+                class="rounded-2xl shadow-lg w-full"
+            />
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Time Period Selection</h2>
+            <p class="mb-4">In the top-right corner of the page, you can filter the data by time periods using the dropdown menu. The available options include:</p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Today</strong>: View data for the current day.</li>
+                <li><strong>Week</strong>: Aggregate data over the past 7 days.</li>
+                <li><strong>Month</strong>: Displays statistics for the current month.</li>
+                <li><strong>Quarter</strong>: Shows data for the current quarter.</li>
+                <li><strong>Year</strong>: Provides an overview for the current year.</li>
+            </ul>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
+                <p class="text-blue-700">This sorting feature allows you to focus on specific timeframes to better analyze user behavior and engagement.</p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Interpreting the Data</h2>
+            <p class="mb-4">By regularly reviewing the Insights page, you can:</p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Track Growth</strong>: Monitor the increase in new and returning users.</li>
+                <li><strong>Analyze Engagement</strong>: Understand how users are interacting with your assistant over time.</li>
+                <li><strong>Optimize Performance</strong>: Identify patterns in usage that can inform improvements to your assistant's responses and functionalities.</li>
+            </ul>
+            <div class="bg-gray-50 border-l-4 border-gray-500 p-4 mt-6">
+                <p class="text-gray-700">Use these insights to continuously improve user experience and drive better results with your AI Assistant.</p>
+            </div>
+        </section>
+    </div>
+</GuideLayout>

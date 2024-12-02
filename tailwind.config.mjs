@@ -8,7 +8,6 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      // padding: "2rem",
       screens: {
         "2xl": "1400px",
       },
@@ -21,24 +20,23 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(230 100% 50%)",
+          foreground: "hsl(0 0% 100%)",
+          hover: "hsl(230 100% 45%)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "hsl(250 100% 60%)",
+          foreground: "hsl(0 0% 100%)",
+          hover: "hsl(250 100% 55%)",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "hsl(280 100% 65%)",
+          foreground: "hsl(0 0% 100%)",
+          muted: "hsl(280 30% 90%)",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -48,33 +46,26 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        Pink: {
-          DEFAULT: "hsl(var(--Pink))",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
-        Purple: {
-          DEFAULT: "hsl(var(--Purple))",
+        error: {
+          DEFAULT: "hsl(0 84% 60%)",
+          foreground: "hsl(0 0% 100%)",
         },
-        Red: {
-          DEFAULT: "hsl(var(--Red))",
+        warning: {
+          DEFAULT: "hsl(38 92% 50%)",
+          foreground: "hsl(0 0% 100%)",
         },
-        Orange: {
-          DEFAULT: "hsl(var(--Orange))",
+        success: {
+          DEFAULT: "hsl(142 72% 29%)",
+          foreground: "hsl(0 0% 100%)",
         },
-        Yellow: {
-          DEFAULT: "hsl(var(--Yellow))",
-        },
-        Green: {
-          DEFAULT: "hsl(var(--Green))",
-        },
-        Teal: {
-          DEFAULT: "hsl(var(--Teal))",
-        },
-        Sky: {
-          DEFAULT: "hsl(var(--Sky))",
-        },
-        Blue: {
-          DEFAULT: "hsl(var(--Blue))",
-        },
+        info: {
+          DEFAULT: "hsl(198 93% 60%)",
+          foreground: "hsl(0 0% 100%)",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -82,18 +73,23 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        "slide-in": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        "slide-up": {
+          "0%": { transform: "translateY(10px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.5s ease-in-out",
+        "slide-in": "slide-in 0.5s ease-out",
+        "slide-up": "slide-up 0.5s ease-out",
       },
       minHeight: {
         dynamic_hero: "calc(100vh - 69px - 76.8px)",
@@ -107,9 +103,14 @@ module.exports = {
       height: {
         dynamic_hscreen: "calc(100dvh - 36px - 2rem)",
       },
+      boxShadow: {
+        'glow': '0 0 20px rgba(79, 70, 229, 0.2)',
+        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      },
     },
     fontFamily: {
-      sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+      sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+      display: ["Cal Sans", "Inter var", ...defaultTheme.fontFamily.sans],
       mono: ["'JetBrains Mono'", ...defaultTheme.fontFamily.mono],
     },
   },

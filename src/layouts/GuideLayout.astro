@@ -1,0 +1,24 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import GuideSidebar from "@/components/core/GuideSidebar.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex gap-8">
+      <GuideSidebar />
+      <div class="flex-1 min-w-0">
+        <article class="prose dark:prose-invert max-w-none">
+          <slot />
+        </article>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

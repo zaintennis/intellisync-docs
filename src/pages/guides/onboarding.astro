@@ -1,0 +1,201 @@
+---
+import GuideLayout from "@/layouts/GuideLayout.astro";
+
+const title = "Getting Started with IntelliSync";
+const description = "A comprehensive guide to setting up and optimizing your AI assistant for maximum effectiveness";
+---
+
+<GuideLayout title={title} description={description}>
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-4 text-foreground">Welcome to IntelliSync! 🚀</h1>
+
+        <p class="text-lg mb-8 text-foreground/80">
+            Get ready to transform your business with AI-powered assistance. This guide will walk you through each step of setting up your intelligent assistant.
+        </p>
+
+        <div class="bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-lg p-6 mb-12">
+            <h2 class="text-xl font-semibold mb-4 text-indigo-950">Quick Start Checklist</h2>
+            <ul class="space-y-2 text-indigo-950">
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Set up your account
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Import knowledge base
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Customize your assistant
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Test and deploy
+                </li>
+            </ul>
+        </div>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 text-foreground">1. Account Setup 🔐</h2>
+            <div class="relative bg-background rounded-xl border border-border/40 transition-all duration-300 hover:border-[#4ECDC4]/50">
+                <div class="p-8">
+                    <div class="w-12 h-12 mb-6 rounded-lg flex items-center justify-center relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B6B] via-[#4ECDC4] to-[#45B7D1] rounded-lg opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-[#4ECDC4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-foreground mb-4">Start by configuring your account with essential details and preferences</p>
+                    <ul class="list-disc pl-6 space-y-2 text-foreground/80">
+                        <li>Complete your organization profile</li>
+                        <li>Set up team member access and permissions</li>
+                        <li>Configure security settings and API access</li>
+                        <li>Set your preferred timezone and notification preferences</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 text-foreground">2. Create Your First Assistant 🤖</h2>
+            <div class="relative bg-background rounded-xl border border-border/40 transition-all duration-300 hover:border-[#4ECDC4]/50">
+                <div class="p-8">
+                    <div class="w-12 h-12 mb-6 rounded-lg flex items-center justify-center relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B6B] via-[#4ECDC4] to-[#45B7D1] rounded-lg opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-[#4ECDC4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-foreground mb-4">Design your AI assistant with these key configurations</p>
+                    <ul class="list-disc pl-6 space-y-2 text-foreground/80">
+                        <li>Choose your assistant's name and personality</li>
+                        <li>Define primary use cases and specializations</li>
+                        <li>Set up response templates and conversation flows</li>
+                        <li>Configure language and tone preferences</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 text-foreground">3. Knowledge Base Setup 📚</h2>
+            <div class="relative bg-background rounded-xl border border-border/40 transition-all duration-300 hover:border-[#4ECDC4]/50">
+                <div class="p-8">
+                    <div class="w-12 h-12 mb-6 rounded-lg flex items-center justify-center relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B6B] via-[#4ECDC4] to-[#45B7D1] rounded-lg opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-[#4ECDC4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.477 6.936 9.268 8.03 7.5 9.4c-1.827 1.361-6 6.269-6 11.668 0 5.398 4.173 9.999 6 11.668 1.827 1.361 3.374 2.415 6.768 2.415 3.398 0 6.768-1.054 6.768-2.415 0-2.669-4.173-6.27-6-11.668-1.827-1.361-3.5-2.415-6.768-2.415zm-3.995-1.885v-.787c0-4.354 3.543-7.929 7.94-7.929 4.397 0 7.94 3.575 7.94 7.929v.787c0 4.354-3.543 7.929-7.94 7.929-4.397 0-7.94-3.575-7.94-7.929zm-.878 11.414h-.01" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-foreground mb-4">Import and organize your knowledge base</p>
+                    <ul class="list-disc pl-6 space-y-2 text-foreground/80">
+                        <li>Upload documentation (PDF, DOC, DOCX, TXT)</li>
+                        <li>Configure website crawling for dynamic content</li>
+                        <li>Set up API connections to existing databases</li>
+                        <li>Organize content with tags and categories</li>
+                    </ul>
+                    <div class="mt-4 p-4 bg-indigo-100 rounded-md">
+                        <p class="text-sm text-indigo-950">
+                            <strong class="text-indigo-950 font-semibold">Pro Tip</strong> Start with your most frequently accessed documents to build a strong foundation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 text-foreground">4. Integration Setup 🔌</h2>
+            <div class="relative bg-background rounded-xl border border-border/40 transition-all duration-300 hover:border-[#4ECDC4]/50">
+                <div class="p-8">
+                    <div class="w-12 h-12 mb-6 rounded-lg flex items-center justify-center relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B6B] via-[#4ECDC4] to-[#45B7D1] rounded-lg opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-[#4ECDC4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 8v12a2 2 0 002 2h6a2 2 0 002-2V8a2 2 0 00-2-2h-2.5a1 1 0 00-.5.5v12a1 1 0 001 1H7a1 1 0 001-1V8a1 1 0 00-.5-.5H3z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-foreground mb-4">Connect your assistant with your existing tools</p>
+                    <ul class="list-disc pl-6 space-y-2 text-foreground/80">
+                        <li>Website integration with customizable widget</li>
+                        <li>API endpoint configuration</li>
+                        <li>Third-party platform connections</li>
+                        <li>Analytics and monitoring setup</li>
+                    </ul>
+                    <div class="mt-4 bg-gray-100 rounded-md p-4">
+                        <code class="text-sm text-foreground/80">
+                            {'<script>\n  window.intellisyncConfig = {\n    "botId": "YOUR_BOT_ID",\n    "theme": "light"\n  }\n</script>'}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 text-foreground">5. Testing Your Assistant 🎯</h2>
+            <div class="relative bg-background rounded-xl border border-border/40 transition-all duration-300 hover:border-[#4ECDC4]/50">
+                <div class="p-8">
+                    <div class="w-12 h-12 mb-6 rounded-lg flex items-center justify-center relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B6B] via-[#4ECDC4] to-[#45B7D1] rounded-lg opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-[#4ECDC4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-foreground mb-4">Ensure your assistant performs optimally</p>
+                    <ul class="list-disc pl-6 space-y-2 text-foreground/80">
+                        <li>Conduct comprehensive response testing</li>
+                        <li>Verify knowledge base accuracy</li>
+                        <li>Test edge cases and complex queries</li>
+                        <li>Validate integration functionality</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 text-foreground">6. Next Steps 🚀</h2>
+            <div class="relative bg-background rounded-xl border border-border/40 transition-all duration-300 hover:border-[#4ECDC4]/50">
+                <div class="p-8">
+                    <div class="w-12 h-12 mb-6 rounded-lg flex items-center justify-center relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B6B] via-[#4ECDC4] to-[#45B7D1] rounded-lg opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-[#4ECDC4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2m0-5h2a2 2 0 012 2v3m2 4h3a2 2 0 012 2v3m-3-3H9m-6-1V8a2 2 0 012-2h3.5a1.5 1.5 0 012 1.5V12a1.5 1.5 0 01-1.5 1.5H9m0-9H5a2 2 0 012-2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2h2.5a1.5 1.5 0 012 1.5v2m-7 0H2v2a2 2 0 002 2V4z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-foreground mb-4">Optimize and expand your assistant's capabilities</p>
+                    <ul class="list-disc pl-6 space-y-2 text-foreground/80">
+                        <li>Monitor performance metrics</li>
+                        <li>Implement user feedback</li>
+                        <li>Expand knowledge base coverage</li>
+                        <li>Explore advanced customization options</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-indigo-100 border-l-4 border-indigo-500 p-6 mt-8 rounded-r-lg">
+            <h3 class="text-indigo-950 font-semibold mb-2">Need Help?</h3>
+            <p class="text-indigo-950">
+                Our support team is available 24/7 to assist you with any questions or concerns. Contact us through the support portal or email support@intellisync.ai
+            </p>
+        </div>
+    </div>
+</GuideLayout>

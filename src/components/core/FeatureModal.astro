@@ -1,0 +1,66 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  gradient: string;
+  longDescription?: string;
+}
+
+const { id, title, description, icon, gradient, longDescription } = Astro.props;
+---
+
+<dialog id={id} class="modal fixed inset-0 bg-transparent p-4">
+  <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" aria-hidden="true"></div>
+  <div class="fixed inset-0 flex items-center justify-center p-4">
+    <div class="relative bg-background rounded-xl max-w-2xl w-full p-6 shadow-xl">
+      <div class="flex items-start gap-4">
+        <div class={`w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br ${gradient} flex-shrink-0`}>
+          <div class="text-white" set:html={icon} />
+        </div>
+        <div class="flex-1">
+          <h3 class="text-xl font-semibold mb-2 text-foreground">{title}</h3>
+          <p class="text-foreground/80 mb-4">{description}</p>
+          {longDescription && (
+            <div class="prose prose-sm dark:prose-invert max-w-none [&_h4]:text-foreground [&_p]:text-foreground/90 [&_li]:text-foreground/90">
+              <Fragment set:html={longDescription} />
+            </div>
+          )}
+        </div>
+      </div>
+      <button
+        onclick="this.closest('dialog').close()"
+        class="absolute top-4 right-4 p-2 rounded-full hover:bg-muted/50 transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="mt-6 flex justify-end">
+        <button
+          onclick="this.closest('dialog').close()"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-10 py-2 px-4"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  dialog {
+    margin: 0;
+    border: none;
+    padding: 0;
+    background: transparent;
+    max-height: 100vh;
+    max-width: 100vw;
+  }
+  
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+</style>
